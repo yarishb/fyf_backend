@@ -31,6 +31,10 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING,
         console.log("MongoDB connection established");  
 })
 
+
+app.get("/", (req,res) => {
+    res.send("Hello beckend")
+})
 //set up routes
 
 app.use("/", require("./routes/userRouter"))
